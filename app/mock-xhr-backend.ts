@@ -1,7 +1,9 @@
 import { Request, Response, ResponseOptions, RequestMethod } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
-
+//to support HTTP calls to URL media-items' for GET,POST,DELETE
+//allows us to build out the media item service to use angular's
+//HTTP service while not requiring a separate API to hit
 export class MockXHRBackend {
   constructor() {
   }

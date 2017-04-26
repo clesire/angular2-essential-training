@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+//to mock XHRBackend with our own
 import { HttpModule, XHRBackend } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { MockXHRBackend } from './mock-xhr-backend';
   providers: [
     MediaItemService,
     { provide: lookupListToken, useValue: lookupLists },
+    //add new provide object literal; useclass prop to mock
     { provide: XHRBackend, useClass: MockXHRBackend }
   ],
   bootstrap: [
