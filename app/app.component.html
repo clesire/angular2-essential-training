@@ -5,5 +5,7 @@
   </header>
   <!--binding target = [mediaItem]: input property from the mediaItem component-->
   <!--binding source = firstMediaItem-->
-  <mw-media-item [mediaItemToWatch]="firstMediaItem"></mw-media-item>
+  <mw-media-item 
+  [mediaItem]="firstMediaItem"
+  (delete)="onMediaItemDelete($event)"></mw-media-item>
 </section>

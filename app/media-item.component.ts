@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'mw-media-item',
@@ -10,9 +10,10 @@ export class MediaItemComponent {
   //this lets angular know that we want it to support any 
   //property bindings placed on instances of the mw-media-item
   //elements where the property name is mediaItem
-  @Input('mediaItemToWatch') mediaItem;
-
+  @Input() mediaItem;
+  //exposing an eventthat can be subscribed to on our custom element
+  @Output() delete = new EventEmitter();
   onDelete() {
-    console.log('deleted');
+    this.delete.emit(this.mediaItem);
   }
 }
