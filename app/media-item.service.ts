@@ -9,6 +9,9 @@ export class MediaItemService {
   get(medium) {
     let searchParams = new URLSearchParams();
     searchParams.append('medium', medium);
+    //HTTP GET second argument of request options of an obj literal
+    //request option has search property: 
+    //    -either string or an instance of URLSearchParams
     return this.http.get('mediaitems', { search: searchParams })
       .map(response => {
         return response.json().mediaItems;

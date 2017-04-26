@@ -23,6 +23,7 @@ export class MediaItemListComponent {
 
   getMediaItems(medium) {
     this.medium = medium;
+    //pass in the medium parameter
     this.mediaItemService.get(medium)
       .subscribe(mediaItems => {
         this.mediaItems = mediaItems;
