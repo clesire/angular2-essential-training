@@ -2,11 +2,16 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+//with a constructor requesting the HTTP type, 
+//but this is a custom built service so Angular
+//doesnt know to do constructor injection on it
+//use Injectable decorator
 @Injectable()
 export class MediaItemService {
   constructor(private http: Http) {}
 
   get() {
+    //cold observable
     return this.http.get('mediaitems')
       .map(response => {
         return response.json().mediaItems;

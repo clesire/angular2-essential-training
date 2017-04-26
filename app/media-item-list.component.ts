@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { MediaItemService } from './media-item.service';
 
 @Component({
@@ -12,6 +11,7 @@ export class MediaItemListComponent {
   mediaItems = [];
 
   constructor(private mediaItemService: MediaItemService) {}
+
 
   ngOnInit() {
     this.getMediaItems(this.medium);
