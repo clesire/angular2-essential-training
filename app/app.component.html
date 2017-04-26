@@ -3,5 +3,7 @@
     <h1>Media Watch List</h1>
     <p class="description">Keeping track of the media I want to watch.</p>
   </header>
-  <mw-media-item [mediaItem]="firstMediaItem"></mw-media-item>
+  <!--binding target = [mediaItem]: input property from the mediaItem component-->
+  <!--binding source = firstMediaItem-->
+  <mw-media-item [mediaItemToWatch]="firstMediaItem"></mw-media-item>
 </section>

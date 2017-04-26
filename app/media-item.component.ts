@@ -6,7 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['app/media-item.component.css']
 })
 export class MediaItemComponent {
-  @Input() mediaItem;
+  //input decorator
+  //this lets angular know that we want it to support any 
+  //property bindings placed on instances of the mw-media-item
+  //elements where the property name is mediaItem
+  @Input('mediaItemToWatch') mediaItem;
 
   onDelete() {
     console.log('deleted');
