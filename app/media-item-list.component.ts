@@ -16,7 +16,7 @@ export class MediaItemListComponent {
   ngOnInit() {
     this.getMediaItems(this.medium);
   }
-
+  //pass in function to trigger a reload of the list on delete
   onMediaItemDelete(mediaItem) {
     this.mediaItemService.delete(mediaItem)
       .subscribe(() => {

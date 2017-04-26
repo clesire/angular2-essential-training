@@ -14,7 +14,9 @@ export class MediaItemService {
         return response.json().mediaItems;
       });
   }
-  
+  //return a call to http.post that takes in a URL string
+  //(e.g. mediaItem's URL that mock backend supports)
+  //and the body of the post
   add(mediaItem) {
     return this.http.post('mediaitems', mediaItem)
       .map(response => {});
