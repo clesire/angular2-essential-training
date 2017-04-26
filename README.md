@@ -1,3 +1,5 @@
+### * added comment explanations for training purpose after watchin lynda video
+
 # Angular Essential Training
 
 This is the repository for my course **Angular Essential Training**  
